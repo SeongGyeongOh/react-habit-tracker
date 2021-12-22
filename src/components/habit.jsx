@@ -1,10 +1,20 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Habit extends Component {
+class Habit extends PureComponent {
   // state 멤버변수 - object
   // state = {
   //   count: 0,
   // }
+
+  componentDidMount() {
+    // 컴포넌트가 화면에 보여질 때
+    console.log(`componentDodMount: ${this.props.habit.name}`)
+  }
+
+  componentWillUnmount() {
+    // 컴포넌트가 화면에서 사라질 때
+    console.log(`componentWillUnmount: ${this.props.habit.name}`)
+  }
 
   // 멤버변수
   handleIncrement = () => {
@@ -20,7 +30,9 @@ class Habit extends Component {
   }
 
   render() {
+    console.log(`habit: ${this.props.habit.name}`)
     const { name, count } = this.props.habit
+    // const { count } = this.props
     return (
       <li className='habit'>
         <span className='habit-name'>{name}</span>

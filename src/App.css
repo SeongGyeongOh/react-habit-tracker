@@ -8,6 +8,22 @@ button {
   cursor: pointer;
 }
 
+.add-form {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.input-box {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.input-button {
+  background-color: olivedrab;
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+}
+
 .nav-bar {
   align-items: center;
   background-color: wheat;
